@@ -5,7 +5,7 @@ import {SIGNUP, LOGIN} from '../../config/urls'
 
 const { dispatch } = store
 
-const saveUserData = (data) =>{
+export const saveUserData = (data) =>{
     dispatch({
         type: types.LOGIN,
         payload: data

@@ -101,16 +101,16 @@ export function apiGet(endPoint, data, headers = {}, requestOptions) {
 export function apiPut(endPoint, data, headers = {}) {
 	return apiReq(endPoint, data, 'put', headers);
 }
-export const setUserData = (data) => {
+export const setUserData = (key, data) => {
   console.log(data)
   data = JSON.stringify(data);
-  return AsyncStorage.setItem('userData', data);
+  return AsyncStorage.setItem(key, data);
 }
 
 // remove user details function
-export const removeUserData = async (data) => {
+export const removeUserData = async (key) => {
   try {
-    await AsyncStorage.removeItem('userData')
+    await AsyncStorage.removeItem(key)
   } catch (error) {
     console.log(error)
   }

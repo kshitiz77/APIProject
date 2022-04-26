@@ -10,13 +10,13 @@ const userStatus = (state = initialState, action) => {
         case types.LOGIN:
             let data = action.payload;
             console.log('data', data)
-            setUserData(data)
+            setUserData('userData', data)
             return {
-                // ...state.userData,
+                ...state.userData,
                 userData: data
             }
         case types.USER_LOGOUT:
-            removeUserData();
+            removeUserData('userData');
             return {
                 userData: undefined
             }

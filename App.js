@@ -12,7 +12,9 @@ const App = () => {
   useEffect(() => {
     getUserData().then((res) => {
       console.log("store data", res)
-      actions.login(res)
+      if(!!res){
+        actions.saveUserData(res)
+      }
     })
   }, [])
   return (

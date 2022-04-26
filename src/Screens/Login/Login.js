@@ -34,7 +34,7 @@ const Login = ({ navigation }) => {
         try {
             const res = await actions.login(apiData)
             console.log("Login api res_+++++",res)
-            alert("User Login successfully....!!!")
+            // alert("User Login successfully....!!!")
         } catch (error) {
             console.log("error raised", error)
             alert(error?.message)
